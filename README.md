@@ -4,7 +4,7 @@ Small Android app that writes a FFlag override named `DFIntTaskSchedulerTargetFp
 `/data/local/tmp/ClientAppSettings.json`, the external settings file the Roblox Android
 client looks for at launch. Works through **root** or **Shizuku**.
 
-## Use
+## Usage
 1. Install the APK.
 2. Pick **Root** or **Shizuku**.
 3. Choose an FPS, tap **Apply**. Roblox is force-closed so it re-reads the file.
