@@ -1,4 +1,4 @@
-package dev.rbxfps
+package com.homuhomu833.rbxfps
 
 import com.topjohnwu.superuser.Shell
 import rikka.shizuku.Shizuku

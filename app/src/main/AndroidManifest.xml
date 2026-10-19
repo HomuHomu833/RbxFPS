@@ -3,6 +3,8 @@
 
     <application
         android:name=".RbxApp"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:allowBackup="false"
         android:label="@string/app_name"
         android:theme="@style/Theme.RbxFps">

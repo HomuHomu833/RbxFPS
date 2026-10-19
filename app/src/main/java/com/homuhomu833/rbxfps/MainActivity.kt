@@ -1,4 +1,4 @@
-package dev.rbxfps
+package com.homuhomu833.rbxfps
 
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
     private companion object {
         const val FILE = "/data/local/tmp/ClientAppSettings.json"
         const val ROBLOX = "com.roblox.client"
-        const val GOS = "com.samsung.android.game.gos"
         const val FLAG = "DFIntTaskSchedulerTargetFps"
         val FPS_VALUES = listOf(60, 90, 120, 144, 165, 200, 240)
         const val DEFAULT_FPS = 60
@@ -78,23 +77,6 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<View>(R.id.btnStatus).setOnClickListener {
             exec("File status", "ls -l $FILE 2>&1; cat $FILE 2>&1")
-        }
-        findViewById<View>(R.id.btnGosOff).setOnClickListener {
-            exec(
-                "Suspend GOS",
-                "cmd package suspend --user 0 $GOS; pm disable-user --user 0 $GOS; " +
-                    "dumpsys package $GOS | grep -E 'suspended=|enabled=' | head -n 2"
-            )
-        }
-        findViewById<View>(R.id.btnGosOn).setOnClickListener {
-            exec(
-                "Restore GOS",
-                "cmd package unsuspend --user 0 $GOS; pm unhide $GOS 2>&1; pm enable $GOS; " +
-                    "dumpsys package $GOS | grep -E 'suspended=|enabled=' | head -n 2"
-            )
-        }
-        findViewById<View>(R.id.btnGosStatus).setOnClickListener {
-            exec("GOS status", "dumpsys package $GOS | grep -E 'hidden=|suspended=|enabled=' | head -n 3")
         }
     }
 

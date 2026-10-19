@@ -1,4 +1,4 @@
-package dev.rbxfps
+package com.homuhomu833.rbxfps
 
 import android.app.Application
 import com.google.android.material.color.DynamicColors
