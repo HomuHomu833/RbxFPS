@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         const val GOS = "com.samsung.android.game.gos"
         const val FLAG = "DFIntTaskSchedulerTargetFps"
         val FPS_VALUES = listOf(60, 90, 120, 144, 165, 200, 240)
-        const val DEFAULT_FPS = 120
+        const val DEFAULT_FPS = 60
     }
 
     private lateinit var modeToggle: MaterialButtonToggleGroup
